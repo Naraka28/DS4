@@ -37,7 +37,6 @@ def get_exchange_rate_dict(dom):
         i=0
         long=len(row.find_all("td"))
         for col in row.find_all("td"):
-            print(f"{col} {i}")
             if long<5:
                 if i==0:
                     institucion=col.find(class_="small-hide")
@@ -48,7 +47,6 @@ def get_exchange_rate_dict(dom):
                     print(compra)
             else:
                 if i==0:
-                    print(f"{col} {i}")
                     institucion=col.find(class_="small-hide")
                     institucion=institucion.text.strip()
                     print(institucion)
